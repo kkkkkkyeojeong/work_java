@@ -6,7 +6,7 @@ public class practice07 {
 	public static void main(String[] args) {
 	
 		Scanner input = new Scanner(System.in);
-		System.out.println("¼ıÀÚ ¼¼°³¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ìˆ«ì ì„¸ê°œë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		int a = input.nextInt();
 		int b = input.nextInt();
 		int c = input.nextInt();

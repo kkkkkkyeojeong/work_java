@@ -6,7 +6,7 @@ public class ToDigit {
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
-		System.out.println("¼ıÀÚ ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ìˆ«ì í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		
 		int num = input.nextInt();
 		printStream(num);

@@ -6,7 +6,7 @@ public class practice03 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("¹®ÀÚ ÇÏ³ª¿Í ¿Âµµ(½Ç¼öÇü)¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ë¬¸ì í•˜ë‚˜ì™€ ì˜¨ë„(ì‹¤ìˆ˜í˜•)ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		
 		String a = input.next();
 		double b = input.nextDouble();
@@ -14,15 +14,15 @@ public class practice03 {
 		switch(a) {
 		
 		case "f": case "F":
-			System.out.println("¼·¾¾: " + (5.0/9.0)*(b-32));
+			System.out.println("ì„­ì”¨: " + (5.0/9.0)*(b-32));
 			break;
 			
 		case "C": case "c":
-			System.out.println("È­¾¾: " + (9.0/5.0)*(b+32));
+			System.out.println("í™”ì”¨: " + (9.0/5.0)*(b+32));
 			break;
 			
 		default:
-			System.err.printf("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù. \n");
+			System.err.printf("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤. \n");
 			 
 		}
 	}

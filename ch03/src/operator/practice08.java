@@ -7,7 +7,7 @@ public class practice08 {
 	public static void main(String[] args) {
 	
 		Scanner input = new Scanner(System.in);
-		System.out.println("Å°¿Í ¸ö¹«°Ô¸¦ ½Ç¼ö·Î ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("í‚¤ì™€ ëª¸ë¬´ê²Œë¥¼ ì‹¤ìˆ˜ë¡œ ìž…ë ¥í•˜ì„¸ìš”.");
 
 		double weight = input.nextDouble();
 		double height = input.nextDouble();
@@ -15,10 +15,10 @@ public class practice08 {
 		double resulth = (height - 100) * 0.9;
 		
 		if (weight <= resulth) {
-			System.out.println("Á¤»ó");
+			System.out.println("ì •ìƒ");
 		}
 		else {
-			System.out.println("ºñ¸¸");
+			System.out.println("ë¹„ë§Œ");
 		}
 	}
 }

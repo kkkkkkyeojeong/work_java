@@ -8,7 +8,7 @@ public class BasicOP {
 		day = remainder = 365;
 		int week = 365 / 7;
 		
-		System.out.format("1³âÀº %dÀÏÀÌ¸ç %dÁÖÀÌ´Ù.%n", day, week);
+		System.out.format("1ë…„ì€ %dì¼ì´ë©° %dì£¼ì´ë‹¤.%n", day, week);
 		System.out.println(remainder %= 7);
 		System.out.println(remainder);
 	}

@@ -8,11 +8,11 @@ public class practice {
 		switch (x / 2) {
 		
 		case 0:
-			System.out.println("¾ç¼ö\n");
+			System.out.println("ì–‘ìˆ˜\n");
 		break;
 		
 		case 1:
-			System.out.printf("À½¼ö\n");
+			System.out.printf("ìŒìˆ˜\n");
 			
 		}
 	}

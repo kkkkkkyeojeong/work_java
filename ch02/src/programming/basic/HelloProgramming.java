@@ -2,11 +2,11 @@ package programming.basic;
 
 public class HelloProgramming {
 
-	static String fd = " -- ÇÊµå";
-	static String md = " -- ¸Ş¼Òµå";
+	static String fd = " -- í•„ë“œ";
+	static String md = " -- ë©”ì†Œë“œ";
 	
 	public static void main(String[] args) {
-		System.out.println("ÀÚ¹Ù Å¬·¡½ºÀÇ ±¸Á¶");
+		System.out.println("ìë°” í´ë˜ìŠ¤ì˜ êµ¬ì¡°");
 		write(fd);
 		write(md);
 		

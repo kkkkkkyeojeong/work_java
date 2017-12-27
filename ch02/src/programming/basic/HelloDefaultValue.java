@@ -2,14 +2,14 @@ package programming.basic;
 
 public class HelloDefaultValue {
 
-	// ÇÊµå ¼±¾ğ - ÃÊ±â°ª ÀÚµ¿À¸·Î ¼³Á¤µÊ 
+	// í•„ë“œ ì„ ì–¸ - ì´ˆê¸°ê°’ ìë™ìœ¼ë¡œ ì„¤ì •ë¨ 
 	static int def;
 	static boolean bool;
 	static String name;
 	
 	public static void main(String[] args) {
 		
-		// Áö¿ªº¯¼ö ¼±¾ğ. ¹«Á¶°Ç ÃÊ±âÈ­ ÇØ¾ßÇÔ 
+		// ì§€ì—­ë³€ìˆ˜ ì„ ì–¸. ë¬´ì¡°ê±´ ì´ˆê¸°í™” í•´ì•¼í•¨ 
 		int n = 100;
 		
 		System.out.println(n);

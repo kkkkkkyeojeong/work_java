@@ -6,15 +6,15 @@ public class ToPound {
 
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
-		System.out.println("¹«°Ô¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ë¬´ê²Œë¥¼ ìž…ë ¥í•˜ì„¸ìš”.");
 		
 		double weight = input.nextDouble();
 		
-		System.out.println("¹«°Ô: " + weight + " kg");
+		System.out.println("ë¬´ê²Œ: " + weight + " kg");
 		
 		double result = weight * 2.2;
 		
-		System.out.println("¹«°Ô: " + result + " Ib");
+		System.out.println("ë¬´ê²Œ: " + result + " Ib");
 		
 		input.close();
 	}

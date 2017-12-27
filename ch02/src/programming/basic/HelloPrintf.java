@@ -7,9 +7,9 @@ public class HelloPrintf {
 		System.out.println("123456 123456 123456");
 		System.out.println("--------------------");
 		
-		/* d(Decimal) 10Áø¼ö
-		 * o(Octal)   8Áø¼ö
-		 * h(Hexadecimal)    16Áø¼ö
+		/* d(Decimal) 10ì§„ìˆ˜
+		 * o(Octal)   8ì§„ìˆ˜
+		 * h(Hexadecimal)    16ì§„ìˆ˜
 		 */
 		
 		System.out.format("%6d %6o %6h %n", 10, 10, 10);

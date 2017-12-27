@@ -7,15 +7,15 @@ public class HelloSimplePrintf {
 		int weight = 70;
 		double height = 175.8;
 		
-		/* %d: 10Áø¼ö
-		 * %f: float °ª
-		 * %s: String °ª
-		 * %c: Char °ª
+		/* %d: 10ì§„ìˆ˜
+		 * %f: float ê°’
+		 * %s: String ê°’
+		 * %c: Char ê°’
 		 */
 		
 		//\n   escape sequence
-		System.out.printf("³ªÀÌ: %d, ¸ö¹«°Ô: %d, Å°: %f, ", age, weight, height);
-		System.out.printf("%s: %c Çü", "Ç÷¾×Çü", 'O');
+		System.out.printf("ë‚˜ì´: %d, ëª¸ë¬´ê²Œ: %d, í‚¤: %f, ", age, weight, height);
+		System.out.printf("%s: %c í˜•", "í˜ˆì•¡í˜•", 'O');
 	}
 
 }

@@ -6,7 +6,7 @@ public class practice01 {
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
-		System.out.println("½Ç¼ö µÎ°³¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì‹¤ìˆ˜ ë‘ê°œë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		
 		double a = input.nextDouble();
 		double b = input.nextDouble();
@@ -14,8 +14,8 @@ public class practice01 {
 		int result1 = (int)(a+b);
 		int result2 = (int)((a+b)/2);
 		
-		System.out.println("½Ç¼öÀÇ ÇÕ: " + (double)result1);
-		System.out.println("½Ç¼öÀÇ Æò±Õ: " + (double)result2);
+		System.out.println("ì‹¤ìˆ˜ì˜ í•©: " + (double)result1);
+		System.out.println("ì‹¤ìˆ˜ì˜ í‰ê· : " + (double)result2);
 	}
 
 }

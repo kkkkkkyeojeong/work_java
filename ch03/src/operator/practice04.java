@@ -6,20 +6,20 @@ public class practice04 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("³âµµ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ë…„ë„ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		int year = input.nextInt();
 		
 		if (year%4 == 0) {
 			if (year%100 ==0) {
 				if (year%400 == 0) {
-					System.out.println(year + "Àº(´Â) À±³âÀÔ´Ï´Ù.");
+					System.out.println(year + "ì€(ëŠ”) ìœ¤ë…„ì…ë‹ˆë‹¤.");
 				}
 				else {
-					System.out.println(year + "Àº(´Â) Æò³âÀÔ´Ï´Ù.");
+					System.out.println(year + "ì€(ëŠ”) í‰ë…„ì…ë‹ˆë‹¤.");
 				}
 			}
 		else {
-			System.out.println(year + " Àº(´Â) À±³âÀÔ´Ï´Ù.");	
+			System.out.println(year + " ì€(ëŠ”) ìœ¤ë…„ì…ë‹ˆë‹¤.");	
 		}
 		}
 	}

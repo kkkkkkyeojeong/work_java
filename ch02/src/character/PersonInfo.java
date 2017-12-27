@@ -6,7 +6,7 @@ public class PersonInfo {
 
 	public static void main(String[] args) {
 		
-		System.out.println("¸ö¹«°Ô¿Í Å°¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ëª¸ë¬´ê²Œì™€ í‚¤ë¥¼ ìž…ë ¥í•˜ì„¸ìš”.");
 		
 		Scanner input = new Scanner(System.in);
 		
@@ -14,7 +14,7 @@ public class PersonInfo {
 		double height = input.nextDouble();
 		
 		System.out.println(weight + ", " + height);
-		System.out.printf("¸ö¹«°Ô: %dkg, Å°: %.2fcm", weight, height);
+		System.out.printf("ëª¸ë¬´ê²Œ: %dkg, í‚¤: %.2fcm", weight, height);
 		
 		input.close();
 	}

@@ -4,9 +4,9 @@ public class HelloOverloading {
 	
 	public static void main(String[] args) {
 		
-		/* ¸Ş¼Òµå ¿À¹ö·Îµù(method overloading) È£ÃâÁ¶°Ç
-		 * 1. Argument(=parameter)ÀÇ °³¼ö ÀÏÄ¡
-		 * 2. ArgumentÀÇ Å¸ÀÔÀÌ ÀÏÄ¡ÇÒ °æ¿ì 
+		/* ë©”ì†Œë“œ ì˜¤ë²„ë¡œë”©(method overloading) í˜¸ì¶œì¡°ê±´
+		 * 1. Argument(=parameter)ì˜ ê°œìˆ˜ ì¼ì¹˜
+		 * 2. Argumentì˜ íƒ€ì…ì´ ì¼ì¹˜í•  ê²½ìš° 
 		 */
 		int sum = plus(10, 20);
 		System.out.println(sum);

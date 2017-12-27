@@ -8,10 +8,10 @@ public class HelloChars {
 		System.out.println('\142');
 		System.out.println('\uAC00');
 		System.out.println('\uAC01');
-		System.out.println('°­');
+		System.out.println('ê°•');
 		
-		System.out.println("Hello\nworld\tHi\b\r¾È³çÇÏ¼¼¿ä\r\n");
-		System.out.println("°¡³ª´Ù¶ó¸¶¹Ù»ç");
+		System.out.println("Hello\nworld\tHi\b\rì•ˆë…•í•˜ì„¸ìš”\r\n");
+		System.out.println("ê°€ë‚˜ë‹¤ë¼ë§ˆë°”ì‚¬");
 	}
 
 }

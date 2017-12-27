@@ -6,11 +6,11 @@ public class practice02 {
 	public static void main(String[] args) {
 	
 		Scanner input = new Scanner(System.in);
-		System.out.println("¹«°Ô¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(kg)");
+		System.out.println("ë¬´ê²Œë¥¼ ìž…ë ¥í•˜ì„¸ìš”.(kg)");
 		
 		double w = input.nextDouble();
 		double result = w*0.453592;
 		
-		System.out.printf("¹«°Ô´Â %.3f ÀÔ´Ï´Ù.(pound)", result);
+		System.out.printf("ë¬´ê²ŒëŠ” %.3f ìž…ë‹ˆë‹¤.(pound)", result);
 	}
 }

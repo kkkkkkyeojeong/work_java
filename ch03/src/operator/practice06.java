@@ -6,21 +6,21 @@ public class practice06 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("¿ù(´Ş)À» ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì›”(ë‹¬)ì„ ì…ë ¥í•˜ì„¸ìš”.");
 		int month = input.nextInt();
 		
 		switch(month) {
 		
 		case 1: case 2: case 3: case 4: case 5: case 6:
-			System.out.println(month + "¿ùÀº »ó¹İ±â ÀÔ´Ï´Ù.");
+			System.out.println(month + "ì›”ì€ ìƒë°˜ê¸° ì…ë‹ˆë‹¤.");
 			break;
 		
 		case 7: case 8: case 9: case 10: case 11: case 12:
-			System.out.println(month + "¿ùÀº ÇÏ¹İ±â ÀÔ´Ï´Ù.");
+			System.out.println(month + "ì›”ì€ í•˜ë°˜ê¸° ì…ë‹ˆë‹¤.");
 			break;
 			
 		default:
-			System.out.print("Àß¸øÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+			System.out.print("ì˜ëª»ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 		}
 	}
 }

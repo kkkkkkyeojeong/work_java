@@ -2,11 +2,11 @@ package programming.basic;
 
 public class HelloProgramming02 {
 	
-	static String hello = "¾È³çÇÏ¼¼¿ä. ¿©·¯ºÐ";
+	static String hello = "ì•ˆë…•í•˜ì„¸ìš”. ì—¬ëŸ¬ë¶„";
 	
 	public static void main(String[] args) {
 		
-		String hello2 = "¹Ý°©½À´Ï´Ù.";
+		String hello2 = "ë°˜ê°‘ìŠµë‹ˆë‹¤.";
 		
 		System.out.println(hello2);
 		
@@ -21,17 +21,17 @@ public class HelloProgramming02 {
 	}
 }
 
-// ÇÑÁÙÁÖ¼®
+// í•œì¤„ì£¼ì„
 
-/*¿©·¯ÁÙ ÀÔ·Â ÁÖ¼®
+/*ì—¬ëŸ¬ì¤„ ìž…ë ¥ ì£¼ì„
 dsfdfafds
 dsfsfsdfdf*/ 
 
-/** JavaDoc ÁÖ¼®
+/** JavaDoc ì£¼ì„
  * 
  * 
  */
 
-/*ÇÏÀÌÇÏÀÌÇ×È÷¾ÆÈþÇÏÀÌ  -> ºí·ÏÁöÁ¤ ÈÄ Ctrl + shift + /   ÁÖ¼®»ý¼º
- * 							Ctrl + shift + \   ÁÖ¼®»èÁ¦ 
-¤©¤¤¤©¤¤¤·¤©¤¤¤·¤©¤¤¤©*/
+/*í•˜ì´í•˜ì´í•­ížˆì•„íží•˜ì´  -> ë¸”ë¡ì§€ì • í›„ Ctrl + shift + /   ì£¼ì„ìƒì„±
+ * 							Ctrl + shift + \   ì£¼ì„ì‚­ì œ 
+ã„¹ã„´ã„¹ã„´ã…‡ã„¹ã„´ã…‡ã„¹ã„´ã„¹*/

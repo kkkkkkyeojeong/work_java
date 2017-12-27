@@ -3,9 +3,9 @@ package ch01;
 public class MySecond {
 
 	public static void main(String[] args) {
-		System.out.println("ÀÚ¹Ù´Â");
-		System.out.println("½Ã½ºÅÛ¿¡ µ¶¸³ÀûÀÎ");
-		System.out.println("°´Ã¼ÁöÇâ ÇÁ·Î±×·¡¹Ö ¾ğ¾îÀÌ´Ù.");
+		System.out.println("ìë°”ëŠ”");
+		System.out.println("ì‹œìŠ¤í…œì— ë…ë¦½ì ì¸");
+		System.out.println("ê°ì²´ì§€í–¥ í”„ë¡œê·¸ë˜ë° ì–¸ì–´ì´ë‹¤.");
 
 	}
 
