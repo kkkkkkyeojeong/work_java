@@ -24,5 +24,9 @@ public class Person extends Animal{
 		return this.address;
 	}
 
+	// 메소드 = Person의 내용 출력
+	public void print() {
+		System.out.println("주민등록번호: " + this.ssn + ", 주소: " + this.address);
+	}
 	
 }

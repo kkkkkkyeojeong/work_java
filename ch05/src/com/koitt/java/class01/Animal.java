@@ -7,8 +7,10 @@ package com.koitt.java.class01;
  * - extends로 선언하지 않아도 기본으로 상속받는 클래스 
  * 
  * 접근제한자 
- * - private
- * - public 
+ * - private - 같은 클래스 내부에서만 사용가능
+ * - (default) - 같은 패키지(폴더) 내부에서만 사용가능
+ * - protected - default 범위 + 상속받은 클래스까지 사용가능
+ * - public - 어느곳이든 사용가능 
  */
 
 public class Animal /*extends Object*/{
