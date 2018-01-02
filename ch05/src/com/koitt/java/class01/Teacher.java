@@ -20,8 +20,8 @@ public class Teacher extends Person {
 	}
 	
 	// 다양성(Polymorphism)의 예
-	// 메소드 오버로딩(Method Overloading)
-	// 생성자(Constructor) : 필드 subject만 초기화하는 생성자 - 상속관계 상관없음
+	// 메소드 오버로딩(Method Overloading) - 상속관계 상관없음
+	// 생성자(Constructor) : 필드 subject만 초기화하는 생성자 
 	public Teacher(String subject) {
 		this.subject = subject;
 	}
