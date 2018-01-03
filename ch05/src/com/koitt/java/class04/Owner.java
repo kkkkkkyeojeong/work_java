@@ -12,8 +12,6 @@ public class Owner {
 		this.car = car;
 	}
 	
-	
-	
 	public void introCar() {
 		System.out.print("제 이름은 " + this.name + "입니다. 제 차는 ");
 		System.out.print(car.getBrandName() + "이고, 최고속도는 ");
