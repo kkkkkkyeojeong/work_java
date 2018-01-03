@@ -6,6 +6,8 @@ public class Car {
 	private String brandName;
 	private int speed;
 	
+	
+	
 	public Car(String brandName) {
 		this.brandName = brandName;
 	}
@@ -49,9 +51,19 @@ public class Car {
 		return maxSpeed;
 	}
 	
+	public String getBrandName() {
+		return brandName;
+	}
+
+	public void setBrandName(String brandName) {
+		this.brandName = brandName;
+	}
+
 	public void setMaxSpeed(int maxSpeed) {
 		this.maxSpeed = maxSpeed;
 	}
+	
+
 	
 	public static void main(String[] args) {
 		Car mycar = new Car("포르쉐", 300);
