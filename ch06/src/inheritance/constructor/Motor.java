@@ -1,8 +1,8 @@
 package inheritance.constructor;
 
 public class Motor extends Vehicle{
-	public String name = "자동차";
-	public int displacement;
+	private String name = "자동차";
+	private int displacement;
 	
 	// Motor 의 기본 생성자
 	public Motor() {
@@ -18,10 +18,10 @@ public class Motor extends Vehicle{
 	}
 	
 	public void printInfo() {
-		System.out.print(super.name + " : " + this.name);
-		System.out.println(", 최대속도: " + maxSpeed + " km");
-		System.out.print("정원: " + seater + " 명");
-		System.out.println(", 배기량: " + displacement + " cc");
+		System.out.print(super.getName()+ " : " + this.name);
+		System.out.println(", 최대속도: " + this.getMaxSpeed()+ " km");
+		System.out.print("정원: " + this.getSeater() + " 명");
+		System.out.println(", 배기량: " + this.displacement + " cc");
 		
 	}
 	
