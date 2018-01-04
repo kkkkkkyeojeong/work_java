@@ -34,28 +34,26 @@ public class Account {
 	}
 	
 	public long deposit(long amount) {
-		return this.amount += amount;
+		return this.balance += amount;
 	}
 	
 	public long withdraw(long amount) {
-		long rewith = this.amount;
+		long rewith = this.balance;
 		rewith -= amount;
 		if (rewith <= 0) {
 			System.out.println("잔액이 없습니다.");
-			return 0;
+			return this.balance = 0;
 		}
-		this.amount = rewith;
-		return this.amount;
+		this.balance = rewith;
+		return this.balance;
 		//return this.amount -= amount;
 	}
 	
 	public static void main(String[] args) {
-		Account mama = new Account();
-		//mama.amount = 100;
-		mama.deposit(300);
-		mama.deposit(200);
-		//mama.withdraw(150);
-		System.out.println("잔금: " + mama.withdraw(600));
+		Account gildong = new Account("홍길동", 1000000);
+
+		System.out.println("현재 잔액: " + gildong.deposit(30000));
+		System.out.println("현재 잔액: " + gildong.withdraw(60000));
 	}
 
 }
