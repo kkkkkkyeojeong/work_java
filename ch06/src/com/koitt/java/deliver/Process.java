@@ -1,5 +1,9 @@
 package com.koitt.java.deliver;
 
+/*
+ *  디자인 패턴 - 템플릿 메소드 패턴(Template Method Pattern)
+ */
+
 public abstract class Process {
 	
 	// 1. 주문받기
