@@ -39,11 +39,11 @@ public class Car {
 			return this.speed;
 		}
 			// speed가 최대속도를 넘을 경우 
-			else if (a > this.maxSpeed) {
-				this.speed = this.maxSpeed;
-				System.out.println("최대속도: " + this.maxSpeed + ", 현재속도: " + this.speed);
-				return this.speed;
-			}
+		else if (a > this.maxSpeed) {
+			this.speed = this.maxSpeed;
+			System.out.println("최대속도: " + this.maxSpeed + ", 현재속도: " + this.speed);
+			return this.speed;
+		}
 			else {	
 				this.speed = a;
 				System.out.println("최대속도: " + this.maxSpeed + ", 현재속도: " + this.speed);
@@ -79,11 +79,11 @@ public class Car {
 			return this.speed;
 		}
 			// speed가 0이하 일 경우 
-			else if (a < 0) {
-				this.speed = 0;
-				System.out.println("최대속도: " + this.maxSpeed + ", 현재속도: " + this.speed);
-				return this.speed;
-			}
+		else if (a < 0) {
+			this.speed = 0;
+			System.out.println("최대속도: " + this.maxSpeed + ", 현재속도: " + this.speed);
+			return this.speed;
+		}
 			else {	
 				this.speed = a;
 				System.out.println("최대속도: " + this.maxSpeed + ", 현재속도: " + this.speed);
