@@ -16,7 +16,7 @@ public class Car {
 		a += 5;
 		
 		// 최대속도보다 높을 경우
-		if (a > maxSpeed) {
+		if (a > this.maxSpeed) {
 			System.out.println("최대속도: " + this.maxSpeed + ", 현재속도: " + this.speed);
 			this.speed = this.maxSpeed;
 			return this.speed;
@@ -78,7 +78,7 @@ public class Car {
 			System.out.println("최대속도: " + this.maxSpeed + ", 현재속도: " + this.speed);
 			return this.speed;
 		}
-			// speed가 0이하 일 경우 
+		// speed가 0이하 일 경우 
 		else if (a < 0) {
 			this.speed = 0;
 			System.out.println("최대속도: " + this.maxSpeed + ", 현재속도: " + this.speed);

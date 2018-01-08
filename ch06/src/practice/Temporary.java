@@ -11,15 +11,18 @@ public class Temporary extends Employee{
 	
 	public void setWorkHours(int time) {
 		this.time = time;
-		this.Salary = time * Tmoney;
+		//int a = time * Tmoney;
+		super.setSalary(this.time * this.Tmoney);
 	}
 	
+	
 	public void printInfo( ) {
-		System.out.println("비정규직, " + this.time + " " + this.Salary);
+		System.out.println("비정규직, " + this.time + " / " + super.getSalary());
 	}
 	
 	public static void main(String[] args) {
 	
+		// 문제 3번
 		/*Regular r = new Regular("이순신", 35, "서울", "인사부");
 		Temporary t = new Temporary("장보고", 25, "인천", "경리부");
 		r.setSalary(5000000);
@@ -27,16 +30,22 @@ public class Temporary extends Employee{
 		t.setWorkHours(120);
 		t.printInfo();*/
 		
-		// 문제4번
-		Employee r = new Regular("이순신", 35, "서울", "인사부");
+		// 문제 4번
+		/*Employee r = new Regular("이순신", 35, "서울", "인사부");
 		Employee t = new Temporary("장보고", 25, "인천", "경리부");
 		Regular a = (Regular) r;
 		a.setSalary(5000000);
 		a.printInfo();
 		Temporary b = (Temporary) t;
 		b.setWorkHours(120);
-		b.printInfo();
+		b.printInfo();*/
 		
-		
+		// 문제 4번  ->  동적바인딩 묻는것 / 부모클래스인 Employee 에 public void setWorkHours(int time) {} 메소드 생성 
+		Employee r = new Regular("이순신", 35, "서울", "인사부");
+		Employee t = new Temporary("장보고", 25, "인천", "경리부");
+		r.setSalary(5000000);
+		r.printInfo();
+		t.setWorkHours(120);
+		t.printInfo();
 	}
 }

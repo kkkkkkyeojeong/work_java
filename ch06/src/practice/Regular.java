@@ -6,15 +6,15 @@ public class Regular extends Employee{
 		super(name, age, address, division);
 	}
 	
-	public void setSalary(int Salary) {
+	/*public void setSalary(int Salary) {
 		this.Salary = Salary;
-	}
+	}*/
 /*	public int getMpay( ) {
 		return Mpay;
 	}*/
 	
 	public void printInfo() {
-		System.out.println("정규직," + " " + this.Salary);
+		System.out.println("정규직," + " " + super.getSalary());
 	}
 	
 }

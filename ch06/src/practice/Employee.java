@@ -6,7 +6,7 @@ public class Employee {
 	int age;
 	String address;
 	String division;
-	int Salary;
+	private int Salary;
 
 	public Employee(String name, int age, String address, String division) {
 		this.name = name;
@@ -19,4 +19,17 @@ public class Employee {
 		System.out.println("이름: " + this.name + ", 나이: " + this.age + 
 							", 주소: " + this.address + ", 부서: " + this.division);
 	}
+
+	public int getSalary() {
+		return Salary;
+	}
+
+	public void setSalary(int salary) {
+		Salary = salary;
+	}
+	
+	public void setWorkHours(int time) {
+		
+	}
+	
 }
