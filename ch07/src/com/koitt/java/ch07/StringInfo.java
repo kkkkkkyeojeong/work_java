@@ -22,7 +22,7 @@ public class StringInfo {
 		System.out.printf("%s ", java.concat(" language"));		// 일시적으로 글자 뒤에 붙여서 출력됨  
 		System.out.printf("%s ", java.replace('j', 'J'));		// 모든 j를 대문자 J로 변경 
 		System.out.printf("%s ", java.toUpperCase());
-		System.out.printf("%b ", java.equals("JAVA"));			// 글자비교 대소문자도 비교됨 
+		System.out.printf("%b ", java.equals("java"));			// 글자비교 대소문자도 비교됨 
 		System.out.printf("%s ", java.equalsIgnoreCase("JAVA"));	// 대소문자 구분없이 비교 
 		System.out.printf("%s %n", java.substring(1));			// 입력된 숫자 부분부터 출력 
 		
