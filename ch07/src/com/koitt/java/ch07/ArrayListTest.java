@@ -2,11 +2,12 @@ package com.koitt.java.ch07;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class ArrayListTest {
 
 	public static void main(String[] args) {
-		ArrayList list = new ArrayList();
+		List<Object> list = new ArrayList<>();
 		
 		list.add(0.87);
 		list.add("algo");
@@ -17,7 +18,7 @@ public class ArrayListTest {
 		list.add(3.4);
 		list.add(5.8);
 		
-		Iterator it = list.iterator();			// list 내용들을 순차적으로 뽑아 사용하기 위해 iterator() 사용
+		Iterator<Object> it = list.iterator();			// list 내용들을 순차적으로 뽑아 사용하기 위해 iterator() 사용
 		print(it);
 		
 		for (Object e : list.toArray()) {		// 위의 내용이 담긴 배열로 호출( toArray() )하여 출력 (맨 마지막 줄)
@@ -32,7 +33,7 @@ public class ArrayListTest {
 		System.out.println();
 	}
 
-	public static void print(Iterator it) {
+	public static void print(Iterator<Object> it) {
 		while(it.hasNext()) {						// hasNext(); -> 출력될 값이 있으면 true, 없으면 false
 			System.out.print(it.next() + " ");		// next(); 값을 꺼내 출력하여 다음값 확인  
 		}

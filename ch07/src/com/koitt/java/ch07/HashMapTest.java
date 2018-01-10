@@ -2,11 +2,12 @@ package com.koitt.java.ch07;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 public class HashMapTest {
 	
 	public static void main(String[] args) {
-		HashMap<String, String> hm = new HashMap<String, String>();
+		Map<String, String> hm = new HashMap<String, String>();
 		
 		hm.put("대한민국", "서울");			// key, value
 		hm.put("일본", "동경");
