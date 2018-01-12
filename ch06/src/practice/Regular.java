@@ -13,6 +13,10 @@ public class Regular extends Employee{
 		return Mpay;
 	}*/
 	
+	public void setSalary(long salary) {
+		super.setSalary(salary);
+	}
+	
 	public void printInfo() {
 		System.out.println("정규직," + " " + super.getSalary());
 	}

@@ -2,11 +2,11 @@ package practice;
 
 public class Employee {
 	
-	String name;
-	int age;
-	String address;
-	String division;
-	private int Salary;
+	private String name;
+	private int age;
+	private String address;
+	private String division;
+	private long Salary;
 
 	public Employee(String name, int age, String address, String division) {
 		this.name = name;
@@ -16,16 +16,19 @@ public class Employee {
 	}
 	
 	public void printInfo( ) {
-		System.out.println("이름: " + this.name + ", 나이: " + this.age + 
-							", 주소: " + this.address + ", 부서: " + this.division);
+		System.out.println("이름: " + this.name);
+		System.out.println("나이: " + this.age);
+		System.out.println("주소: " + this.address);
+		System.out.println("부서: " + this.division);
+		
 	}
 
-	public int getSalary() {
+	public long getSalary() {
 		return Salary;
 	}
 
-	public void setSalary(int salary) {
-		Salary = salary;
+	public void setSalary(long salary) {
+		this.Salary = salary;
 	}
 	
 	public void setWorkHours(int time) {
