@@ -11,7 +11,7 @@ public class PersonService {
 		this.dao = new PersonDao();
 	}
 	
-	public void add(Person p) {
+	public void add(Person p) throws MyException {
 		dao.insert(p);
 	}
 	

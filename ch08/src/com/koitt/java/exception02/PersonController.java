@@ -30,40 +30,45 @@ public class PersonController {
 			int menu = input.nextInt();
 
 			switch(menu) {
-				case 1:
-					controller.menuAdd();
-					break;
-				case 2:
-					controller.menuread();
-					break;
-				case 3:
-					System.out.println("프로그램 종료하겠습니다.");
-					// 프로그램 종료, 0: 정상종료, -1: 비정상종료 
-					// exit 의 숫자는 운영체제가 사용
-					System.exit(0);
-					break;
-				default:
-					System.out.println("메뉴 번호를 잘못 입력하셨습니다.");
+			case 1:
+				controller.menuAdd();
+				break;
+			case 2:
+				controller.menuread();
+				break;
+			case 3:
+				System.out.println("프로그램 종료하겠습니다.");
+				// 프로그램 종료, 0: 정상종료, -1: 비정상종료 
+				// exit 의 숫자는 운영체제가 사용
+				System.exit(0);
+				break;
+			default:
+				System.out.println("메뉴 번호를 잘못 입력하셨습니다.");
 			}
 		}
 	}
 
 	public void menuAdd() {
 		System.out.println("=== 사람 정보를 입력해 주세요.(quit: 종료) ===");
-		System.out.println("이름: ");
+		System.out.print("이름: ");
 		String name = this.input.next();
-		System.out.println("나이: ");
+		System.out.print("나이: ");
 		int age = this.input.nextInt();
 
 		// 입력받은 정보를 객체화 
 		Person p = new Person(name, age);
 
 		// Service로 입력받은 사람 객체를 전달 (추가)
-		this.service.add(p);
-
-		System.out.println("입력완료!!!");
+		try {
+			this.service.add(p);
+			System.out.println("입력완료!!!");
+		}
+		catch (MyException e) {
+			// Dao에서 발생한 예외를 service를 거쳐 여기까지 온 다음 출력 
+			System.out.println(e.getMessage());
+		}
 	}
-	
+
 	public void menuread() {
 		System.out.println("=== 인적사항 전체 목록 ===");
 		// Service를 통해 입력했던 인적사항을 모두 불러오기
@@ -73,5 +78,5 @@ public class PersonController {
 			System.out.println(item);
 		}
 	}
-	
+
 }
