@@ -20,6 +20,7 @@ public class PersonController {
 	public static void main(String[] args) {
 		PersonController controller = new PersonController();
 		Scanner input = new Scanner(System.in);
+		
 		while(true) {
 			System.out.println("=== 인적사항 관리 프로그램 ===");
 			System.out.println("1. 인적사항 입력");
@@ -29,7 +30,14 @@ public class PersonController {
 			System.out.println("5. 프로그램 종료");
 			System.out.print("메뉴번호 입력 > ");
 			// 입력받은 메뉴번호
-			int menu = Integer.parseInt(input.nextLine());		// 한 줄 단위로 입력받음(String 타입)
+			int menu = -1;
+			try {
+				menu = Integer.parseInt(input.nextLine());		// 한 줄 단위로 입력받음(String 타입)
+			}
+			catch (NumberFormatException e) {
+				System.out.println("메뉴 숫자로만 입력해주세요.");
+				continue;
+			}
 
 			switch(menu) {
 			case 1:
@@ -61,6 +69,7 @@ public class PersonController {
 		System.out.print("이름: ");
 		String name = this.input.nextLine();		// 한 줄 입력받음
 		System.out.print("나이: ");
+
 		Integer age = null;
 		try {
 			age = Integer.parseInt(this.input.nextLine());	// 한 줄 입력받음		
