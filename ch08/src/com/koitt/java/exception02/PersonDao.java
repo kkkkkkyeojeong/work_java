@@ -30,9 +30,31 @@ public class PersonDao {
 		
 		this.list.add(p);
 	}
-	
+	// 전체 목록 가져오기
 	public List<Person> selectAll() {
 		return this.list;
 	}
 
+	// Argument로 전달받은 객체를 list에서 제거 
+	public void delete(Person p) throws MyException{
+		// list에서 Argument로 전달받은 객체의 name과 동일한 객체가 있는지 확인
+		for (Person item : this.list) {
+			if (item.equals(p)) {
+				list.remove(item);
+				return;
+			}
+		}
+		throw new MyException("E02: 삭제할 내용이 없습니다.");
+	}
+	
+	public void update(Person p) throws MyException {
+		// list에서 Argument로 전달받은 객체의 name과 동일한 객체가 있는지 확인
+		for (Person item : this.list) {
+			if (item.equals(p)) {
+				item.setAge(p.getAge());
+				return;		// 찾았으니 검색 중단 후 끝낸다.
+			}
+		}
+		throw new MyException("E03: 수정할 내용이 없습니다.");
+	}
 }
