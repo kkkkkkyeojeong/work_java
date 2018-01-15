@@ -8,8 +8,9 @@ public class Exam02 {
 		Scanner input = new Scanner(System.in);
 		System.out.println("키와 몸무게를 실수로 입력하세요. >> ");
 		
-		double weight = input.nextDouble();
 		double height = input.nextDouble();
+		double weight = input.nextDouble();
+		
 		
 		String result = (weight <= (height - 100) * 0.9) ? "정상" : "비만" ;
 		
