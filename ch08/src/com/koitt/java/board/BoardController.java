@@ -102,8 +102,15 @@ public class BoardController {
 	public void menuRemove() {
 		System.out.println("---- 삭제할 게시글 글번호를 입력해주세요. ----");
 		System.out.print("글번호: ");
+		
+		Integer id = null;
+		try {
 		// 삭제할 글번호 입력받음 
-		Integer id = Integer.parseInt(this.input.nextLine());
+			id = Integer.parseInt(this.input.nextLine());
+		}
+		catch (NumberFormatException e) {
+			System.out.println("숫자만 입력하세요.");
+		}
 		Board b = new Board(id, null, null, null, null);
 		try {
 			this.service.remove(b);
@@ -117,7 +124,14 @@ public class BoardController {
 	public void menuModity() {
 		System.out.print("수정할 게시글 글번호를 입력해주세요: ");
 		// 글번호
-		Integer id = Integer.parseInt(this.input.nextLine());
+		Integer id = null;
+		try {
+			id = Integer.parseInt(this.input.nextLine());
+		}
+		catch(NumberFormatException e) {
+			System.out.println("숫자만 입력하세요.");
+			return;
+		}
 		// 게시글 내용 수정 
 		System.out.print("글 제목: ");
 		String title = this.input.nextLine();
