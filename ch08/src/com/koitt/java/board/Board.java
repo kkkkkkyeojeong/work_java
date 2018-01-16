@@ -4,14 +4,16 @@ import java.util.Date;
 
 public class Board {
 	
-	private int id;				// 게시물 번호
+	private Integer id;				// 게시물 번호
 	private String title; 		// 제목
 	private String content;		// 내용
 	private String writer;		// 작성자
 	private Date regDate;		// 작성일 
 	
-	// 생성자
-	public Board(int id, String title, String content, String writer, Date regDate) {
+	// 기본생성자
+	public Board() {}
+	// 전체생성자
+	public Board(Integer id, String title, String content, String writer, Date regDate) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -62,6 +64,7 @@ public class Board {
 	}
 	
 	// equals
+	@Override
 	public boolean equals(Object obj) {
 		if(this == obj) {
 			return true;
@@ -76,25 +79,39 @@ public class Board {
 		return false;
 	}
 	
-
+	// toString
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Board [게시물 번호 =");
+		builder.append("Board [게시물 번호 = ");
 		builder.append(id);
-		builder.append(", 제목 =");
+		builder.append(", 제목 = ");
 		builder.append(title);
-		builder.append(", 내용 =");
+		builder.append(", 내용 = ");
 		builder.append(content);
-		builder.append(", 작성자 =");
+		builder.append(", 작성자 = ");
 		builder.append(writer);
-		builder.append(", 작성일 =");
+		builder.append(", 작성일 = ");
 		builder.append(regDate);
 		builder.append("]");
 		return builder.toString();
 	}
 	
-	
+	// hashcode
+	@Override
+	public int hashCode() {
+		return this.id + this.title.hashCode() + this.content.hashCode() + this.writer.hashCode()
+				+ this.regDate.hashCode();
+	}
+	/*public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((content == null) ? 0 : content.hashCode());
+		result = prime * result + id;
+		result = prime * result + ((regDate == null) ? 0 : regDate.hashCode());
+		result = prime * result + ((title == null) ? 0 : title.hashCode());
+		result = prime * result + ((writer == null) ? 0 : writer.hashCode());
+		return result;*/
+}
 	
 
-}

@@ -11,18 +11,20 @@ public class PersonService {
 		this.dao = new PersonDao();
 	}
 	
+	// insert
 	public void add(Person p) throws MyException {
 		dao.insert(p);
 	}
-	
+	// read
 	public List<Person> read() {
 		return dao.selectAll();
 	}
 	
+	// delete
 	public void remove(Person p) throws MyException {
 		dao.delete(p);
 	}
-	
+	// update
 	public void modify(Person p) throws MyException {
 		dao.update(p);
 	}

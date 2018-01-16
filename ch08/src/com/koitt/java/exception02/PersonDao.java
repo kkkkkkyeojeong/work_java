@@ -27,7 +27,6 @@ public class PersonDao {
 				throw new MyException("E01: Person 객체 중복");
 			}
 		}
-		
 		this.list.add(p);
 	}
 	// 전체 목록 가져오기
