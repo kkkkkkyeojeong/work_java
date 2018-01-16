@@ -28,6 +28,4 @@ public class BoardService {
 	public void modify(Board b) throws BoardException {
 		dao.update(b);
 	}
-	
-
 }

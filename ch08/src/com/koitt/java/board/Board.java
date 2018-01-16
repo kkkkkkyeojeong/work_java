@@ -103,15 +103,6 @@ public class Board {
 		return this.id + this.title.hashCode() + this.content.hashCode() + this.writer.hashCode()
 				+ this.regDate.hashCode();
 	}
-	/*public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((content == null) ? 0 : content.hashCode());
-		result = prime * result + id;
-		result = prime * result + ((regDate == null) ? 0 : regDate.hashCode());
-		result = prime * result + ((title == null) ? 0 : title.hashCode());
-		result = prime * result + ((writer == null) ? 0 : writer.hashCode());
-		return result;*/
 }
 	
 

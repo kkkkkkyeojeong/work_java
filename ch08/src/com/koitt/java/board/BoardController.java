@@ -84,8 +84,6 @@ public class BoardController {
 		catch (BoardException e) {
 			System.out.println(e.getMessage());
 		}
-
-			//
 	}
 	// 게시글 불러오기 메소드
 	public void menuRead() {
@@ -111,7 +109,6 @@ public class BoardController {
 		catch (BoardException e) {
 			System.out.println(e.getMessage());
 		}
-		
 	}
 	// 게시글 수정 메소드
 	public void menuModity() {
@@ -138,5 +135,4 @@ public class BoardController {
 			System.out.println(e.getMessage());
 		}
 	}
-
 }

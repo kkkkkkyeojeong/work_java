@@ -7,7 +7,7 @@ public class ExceptionCatch {
 		
 		// catch 여러 개 구성
 		try {
-			data = Integer.parseInt("1123.45");		// 예외발생
+			data = Integer.parseInt("1123.45");		// String이지만 Integer.parseInt로 -> int형인데 double형 입력됨 ->예외발생
 		}
 		catch (ClassCastException e) {
 			System.out.println("예외 발생 1: " + e);

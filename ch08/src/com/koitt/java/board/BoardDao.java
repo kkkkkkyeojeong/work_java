@@ -3,8 +3,6 @@ package com.koitt.java.board;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 public class BoardDao {
 
 	List<Board> board;
@@ -18,7 +16,7 @@ public class BoardDao {
 		// list에서 중복된 게시글 찾기
 		for(Board item : this.board) {
 			if(item.equals(b)){
-				throw new BoardException("E01: 게시글 제목이 중복됩니다.");
+				throw new BoardException("E01: 게시글이 중복됩니다.");
 			}
 		}
 		this.board.add(b);
