@@ -54,6 +54,7 @@ public class BoardController {
 				break;
 			case 5:
 				System.out.println("프로그램을 종료하겠습니다.");
+				input.close();
 				System.exit(0);
 				break;
 			default:
@@ -69,12 +70,14 @@ public class BoardController {
 		System.out.print("글 내용: ");
 		String contents = this.input.nextLine();
 		System.out.print("작성자: ");
-		String name = this.input.next();
+		String name = this.input.nextLine();
 		
-		Date day = new Date();
+		//Date day = new Date();
 
 		// 입력받은 정보를 객체화
-		Board b = new Board(null, title, contents, name, day);
+		// id가 null값인 이유는 Service에서 id값을 생성하기 때문에 (Integer id -> Integer는 클래스이고 기본값은 null 이다.
+		// regDate가 null값인 이유는 Controller는 화면관련 클래스이기 때문에 regDate의 초기화는 Service 클래스에 맡긴다. 
+		Board b = new Board(null, title, contents, name, null);
 
 		// Service로 입력받은 객체 전달(추가)
 		try {
@@ -120,11 +123,8 @@ public class BoardController {
 		String title = this.input.nextLine();
 		System.out.print("글 내용: ");
 		String contents = this.input.nextLine();
-		System.out.print("작성자: ");
-		String name = this.input.nextLine();
-		Date day = new Date();
-
-		Board b = new Board(id, title, contents, name, day);
+		
+		Board b = new Board(id, title, contents, null, null);
 
 		// Service로 입력받은 객체 전달(추가)
 		try {

@@ -1,10 +1,11 @@
 package com.koitt.java.board;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Board {
+public class Board extends Object implements Serializable{
 	
-	private Integer id;				// 게시물 번호
+	private Integer id;			// 게시물 번호
 	private String title; 		// 제목
 	private String content;		// 내용
 	private String writer;		// 작성자
@@ -73,7 +74,8 @@ public class Board {
 			return false;
 		}
 		Board b = (Board) obj;
-		if(this.id == b.id) {
+		// if(this.id == b.id) 
+		if(this.id.equals(b.id)) {
 			return true;
 		}
 		return false;
@@ -100,7 +102,7 @@ public class Board {
 	// hashcode
 	@Override
 	public int hashCode() {
-		return this.id + this.title.hashCode() + this.content.hashCode() + this.writer.hashCode()
+		return this.id.hashCode() + this.title.hashCode() + this.content.hashCode() + this.writer.hashCode()
 				+ this.regDate.hashCode();
 	}
 }
