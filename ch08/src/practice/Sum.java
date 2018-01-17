@@ -4,8 +4,8 @@ class NamedSum extends Thread {
 	private int max;
 	
 	public NamedSum(String name, int max) {
-		Thread a = new Thread();
-		//this.name = a.currentThread().getName()
+		this.setName(name);
+		this.max = max;
 	}
 }
 
@@ -30,8 +30,11 @@ public class Sum extends Thread{
 	}
 	
 	public static void main(String[] args) {
-		Sum s5 = new Sum(5);
-		s5.start();
+		/*Sum s5 = new Sum(5);
+		s5.start();*/
+		
+		NamedSum s5 = new NamedSum("SumThread",5);
+		s5.run();
 		
 	}
 
