@@ -25,7 +25,7 @@ public class Prac01 {
 		}
 		z = x * y;
 		System.out.printf("%d * %d = %d %n", x, y, z);
-
-
+		
+		input.close();
 	}
 }
