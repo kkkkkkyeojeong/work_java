@@ -13,6 +13,7 @@ public class BoardDao {
 	
 	public BoardDao() {
 		this.list = new ArrayList<Board>();
+		// TODO 6. this.list = loadFromFile([파일명]);
 	}
 									// 2.
 	public void insert(Board board) throws BoardException {
@@ -24,6 +25,7 @@ public class BoardDao {
 		}
 		
 		list.add(board);
+		// TODO 3. saveToFile(List, [파일명]);
 	}
 	
 	// 1.
@@ -36,6 +38,7 @@ public class BoardDao {
 		for (int i = 0; i < this.list.size(); i++) {
 			if (this.list.get(i).equals(board)) {
 				this.list.remove(this.list.get(i));
+				// TODO 4. saveToFile(List, [파일명]);
 				return;
 			}
 		}
@@ -56,6 +59,7 @@ public class BoardDao {
 				item.setContent(board.getContent());
 				item.setTitle(board.getTitle());
 				item.setModiDate(board.getModiDate());
+				// TODO 5. saveToFile(List, [파일명]);
 				return;
 			}
 		}
@@ -74,4 +78,16 @@ public class BoardDao {
 		
 		return false;	// 다 찾아봤는데 없어서 false 리턴
 	}
+	
+	/* TODO 1.private void saveToFile(List<Board> list, String filename)
+	 * list: BoardDao에 있는 list 필드
+	 * filename: list 객체를 저장할 파일 이름  
+	 */
+	
+	/*
+	 * TODO 2. private List<Board> loadFromFile(String filename) 
+	 * filename: 게시글 리스트가 저장된 파일명
+	 * 
+	 * List<Board> : 파일에서 불러온 list 객체를 리턴 
+	 */
 }
