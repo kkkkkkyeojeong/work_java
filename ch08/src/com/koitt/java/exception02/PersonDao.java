@@ -1,5 +1,11 @@
 package com.koitt.java.exception02;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,4 +62,66 @@ public class PersonDao {
 		}
 		throw new MyException("E03: 수정할 내용이 없습니다.");
 	}
+	
+	/* TODO 1.private void saveToFile(List<Board> list, String filename)
+	 * list: BoardDao에 있는 list 필드
+	 * filename: list 객체를 저장할 파일 이름  
+	 */
+	
+	private void saveToFile(List<Person> list, String filename) {
+		
+		FileOutputStream fos = null;
+		ObjectOutputStream oos = null;
+		
+		try {
+			fos = new FileOutputStream(filename);
+			oos = new ObjectOutputStream(fos); 
+			
+			oos.writeObject(list);
+			
+			oos.close();
+			fos.close();
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/*
+	 * TODO 2. private List<Board> loadFromFile(String filename) 
+	 * filename: 게시글 리스트가 저장된 파일명
+	 * 
+	 * List<Board> : 파일에서 불러온 list 객체를 리턴 
+	 */
+	private List<Person> loadFromFile(String filename) {
+		FileInputStream fis = null;
+		ObjectInputStream ois = null;
+		
+		Object list = null;
+		
+		try {
+			fis = new FileInputStream(filename);
+			ois = new ObjectInputStream(fis);
+			
+			// Object 타입으로 읽어와 Object타입의 list에 저장됨 
+			list = ois.readObject();
+			
+			ois.close();
+			fis.close();
+			
+			return (List<Person>) list;
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	
 }
