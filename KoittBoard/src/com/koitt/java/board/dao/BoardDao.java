@@ -18,6 +18,7 @@ public class BoardDao {
 	// 데이터베이스 대신 게시글을 저장하는 용도로 사용
 	private List<Board> list;
 	private static final String FNAME = "boardobject.java";
+	Board a = new Board();
 
 	public BoardDao() {
 		//this.list = new ArrayList<Board>();
@@ -27,6 +28,7 @@ public class BoardDao {
 	// 2.
 	public void insert(Board board) throws BoardException {
 		for (Board item : this.list) {
+			
 			if (item.equals(board)) {
 				// 1. 기존 등록된 같은 번호의 게시글이 존재할 경우
 				throw new BoardException("E01: 중복된 번호의 게시글입니다.");
@@ -127,7 +129,7 @@ public class BoardDao {
 	 */
 
 	private List<Board> loadFromFile (String fname) {
-
+		
 		FileInputStream fis = null;
 		ObjectInputStream ois = null;
 
@@ -145,10 +147,10 @@ public class BoardDao {
 
 				// 파일에 있던 객체 꺼내오기
 				list = ois.readObject();	// readObject(); -> 무조건 object타입으로 리턴됨, 형변환 해줘야함 
-
+		
 				ois.close();
 				fis.close();
-
+			
 				return (List<Board>) list;
 			}
 			else {
@@ -168,4 +170,13 @@ public class BoardDao {
 
 		return null;
 	}
+	
+	/*public void saveCount() {
+	
+		
+		a.getId();
+		
+	}*/
+	
+	
 }
