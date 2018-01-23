@@ -27,7 +27,7 @@ public class ChatClientTestDrive {
 					if (obj instanceof String) {
 						String serverMsg = (String) obj;
 						System.out.println(serverMsg);
-						
+
 						if (serverMsg.contains("quit")) {	// contains() -> 문자열안에 quit가 포함되어 있으면 true
 							System.exit(0);
 						}
@@ -56,12 +56,25 @@ public class ChatClientTestDrive {
 			while(true) {
 				String msg = "[" + name + "] " + this.input.nextLine();
 				try {
-					oos.writeObject(msg);
-					switch(msg) {
-						case "quit":
+					// 공백으로 문자열 구분하여 배열에 담음 예) [홍길동] quit -> msg.split[0]: "[홍길동]", msg.split[1]: "quit"
+					String temp = msg.split(" ")[1];		
+					switch(temp) {
+					case "quit":
+						System.out.println("정말로 종료하시겠습니까? (y/n) >>> ");
+						String yorn = this.input.nextLine();
+						if (yorn.equals("y")) {
+							System.out.println("종료!");
 							System.exit(0);
-							break;
+						}
+						else if(yorn.equals("n")){
+							System.out.println("종료가 취소되었습니다.");
+							continue;
+						}
+						System.exit(0);
+						break;
 					}
+					oos.writeObject(msg);
+					
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
