@@ -27,8 +27,10 @@ public class CreateTable {
 			
 			// 테이블 생성
 			Statement stmt = con.createStatement();
-			//stmt.executeUpdate(sqlCT);
-			//System.out.println("테이블 world_0가 생성되었습니다.");
+			
+			stmt.executeUpdate(sqlCT);
+			System.out.println("테이블 city가 생성되었습니다.");
+			
 			
 			stmt.executeUpdate("insert into city(name, major, pop) values ('서울', '이명길', 20000000);");
 			stmt.executeUpdate("insert into city(name, major, pop) values ('인천', '김동훈', 3500000);");

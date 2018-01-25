@@ -15,12 +15,21 @@ public class CreatDB {
 		try {
 			Class.forName(driverName);
 			Connection con = DriverManager.getConnection(dbURL, "root", "koitt");
+			System.out.println("Mysql 데이터베이스에 성공적으로 접속했습니다.");
 			
 			Statement stmt = con.createStatement();
 			
-			// 데이터베이스 생성
+			int num = stmt.executeUpdate("CREATE DATABASE world_0;");	
+			if(num == 1) {
+				System.out.println("데이터베이스 world_0가 생성되었습니다.");
+			}
+			else {
+				System.out.println("이미 생성되어 있는 데이터베이스 입니다.");
+			}
+			
+			/*// 데이터베이스 생성
 			stmt.executeUpdate("CREATE DATABASE world_0;");
-			System.out.println("데이터베이스가 생성되었습니다.");
+			System.out.println("데이터베이스가 생성되었습니다.");*/
 			
 			stmt.close();
 			con.close();
