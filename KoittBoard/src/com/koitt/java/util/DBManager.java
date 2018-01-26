@@ -42,9 +42,9 @@ public class DBManager {
 	}
 	///////////// 여기까지 싱글턴 패턴
 	
-	public List<Board> selectAll() throws ClassNotFoundException, SQLException {
+	public List<Board> selectAll() throws SQLException {
 		
-		conn = DriverManager.getConnection(URL, ID, PASSWORD);
+		conn = DriverManager.getConnection(URL + "/" + DB_NAME, ID, PASSWORD);
 		String sql = "SELECT * FROM board";
 		pstmt = conn.prepareStatement(sql);
 		rs = pstmt.executeQuery();
@@ -61,6 +61,31 @@ public class DBManager {
 		return list;
 		
 	}
+	
+	public void insert(Board board) throws SQLException {
+		// 1. 데이터베이스와 연결
+		conn = DriverManager.getConnection(URL + "/" + DB_NAME, ID, PASSWORD);
+		
+		// 2. SQL문 작성
+		StringBuilder sql = new StringBuilder();
+		sql.append("INSERT INTO board (title, content, writer, regdate, modidate)");
+		sql.append("VALUES (?, ?, ?, CURDATE(), NULL)");
+		
+		// 3. SQL문 실행을 위한 객체 생성
+		pstmt = conn.prepareStatement(sql.toString());
+		
+		// 4. SQL문의 물음표 채우기
+		pstmt.setString(1, board.getTitle());
+		pstmt.setString(2, board.getContent());
+		pstmt.setString(3, board.getWriter());
+		
+		// 5. 채운 SQL문 실행
+		pstmt.executeUpdate();
+		
+		// 6. 객체 연결 해제하는 메소드 호출 
+		this.close();
+	}
+	
 	
 	// 객체 연결 해제 
 	private void close() throws SQLException {

@@ -1,5 +1,6 @@
 package com.koitt.java.board.service;
 
+import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
@@ -20,14 +21,14 @@ public class BoardService {
 	}
 	
 								// 3.
-	public void add(Board board) throws BoardException {
+	public void add(Board board) throws BoardException, SQLException {
 		board.setId(++this.count);		// null값이었던 id값을 채워준다.
 		board.setRegDate(new Date());	// new Date() 하는 순간의 시간이 저장된다.
 		this.dao.insert(board);			// 자료구조(ArrayList)에 저장하기 위해 dao로 board 객체를 전달
 	}
 	
 	// 2.
-	public List<Board> read() {
+	public List<Board> read() throws SQLException {
 		return dao.selectAll();
 	}
 	

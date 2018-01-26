@@ -15,3 +15,6 @@ INSERT INTO BOARD (title, content, writer, regdate, modidate) VALUES ('제목-3'
 
 SELECT * FROM BOARD;
 
+#CURDATE() 현재날짜를 출력 
+INSERT INTO board (title, content, writer, regdate, modidate)
+VALUES ('제목-4', '내용-4', '작성자-4', CURDATE(), NULL);

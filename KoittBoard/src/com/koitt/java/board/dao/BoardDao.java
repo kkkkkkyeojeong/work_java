@@ -7,11 +7,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.koitt.java.board.exception.BoardException;
 import com.koitt.java.board.model.Board;
+import com.koitt.java.util.DBManager;
 
 public class BoardDao {
 
@@ -26,7 +28,7 @@ public class BoardDao {
 		this.list = loadFromFile(BoardDao.FNAME);
 	}
 	// 2.
-	public void insert(Board board) throws BoardException {
+	public void insert(Board board) throws BoardException, SQLException {
 		for (Board item : this.list) {
 			
 			if (item.equals(board)) {
@@ -37,12 +39,13 @@ public class BoardDao {
 
 		this.list.add(board);
 		// TODO 3. saveToFile(List, [파일명]);
-		saveToFile(list, BoardDao.FNAME);
+		//saveToFile(list, BoardDao.FNAME);
+		DBManager.getInstance().insert(board);
 	}
 
 	// 1.
-	public List<Board> selectAll() {
-		return this.list;
+	public List<Board> selectAll() throws SQLException {
+		return DBManager.getInstance().selectAll();
 	}
 
 	// 1.							// 2.
