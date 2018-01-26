@@ -148,6 +148,8 @@ public class BoardController {
 		}
 		catch (BoardException e) {
 			System.out.println(e.getMessage());
+		} catch (SQLException e) {
+			System.out.println("delete() SQL문 오류");
 		}
 	}
 	

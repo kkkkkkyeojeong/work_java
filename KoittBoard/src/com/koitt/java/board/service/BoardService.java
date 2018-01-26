@@ -27,7 +27,7 @@ public class BoardService {
 	}
 	
 	// 2.							// 3.
-	public void remove(Board board) throws BoardException {
+	public void remove(Board board) throws BoardException, SQLException {
 		dao.delete(board);
 	}
 	

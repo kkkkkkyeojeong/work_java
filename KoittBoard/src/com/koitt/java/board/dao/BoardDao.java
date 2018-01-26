@@ -19,13 +19,16 @@ public class BoardDao {
 
 	// 데이터베이스 대신 게시글을 저장하는 용도로 사용
 	private List<Board> list;
-	private static final String FNAME = "boardobject.java";
 	Board a = new Board();
 
 	public BoardDao() {
 		//this.list = new ArrayList<Board>();
 		// TODO 6. this.list = loadFromFile([파일명]);
-		this.list = loadFromFile(BoardDao.FNAME);
+		try {
+			this.list = DBManager.getInstance().selectAll();
+		} catch (SQLException e) {
+			System.out.println("selectAll() BoardDao에서 오류");
+		}
 	}
 	// 2.
 	public void insert(Board board) throws BoardException, SQLException {
@@ -49,16 +52,20 @@ public class BoardDao {
 	}
 
 	// 1.							// 2.
-	public void delete(Board board) throws BoardException {
+	public void delete(Board board) throws BoardException, SQLException {
 		for (int i = 0; i < this.list.size(); i++) {
 			if (this.list.get(i).equals(board)) {
 				this.list.remove(this.list.get(i));
 				// TODO 4. saveToFile(List, [파일명]);
-				saveToFile(list, BoardDao.FNAME);
+				//saveToFile(list, BoardDao.FNAME);
+				DBManager.getInstance().delete(board);
 				return;
 			}
+	
+			
 		}
-
+		
+		
 		// 1.
 		throw new BoardException("E02: 삭제할 게시글이 존재하지 않습니다.");
 	}
@@ -76,7 +83,7 @@ public class BoardDao {
 				item.setTitle(board.getTitle());
 				item.setModiDate(board.getModiDate());
 				// TODO 5. saveToFile(List, [파일명]);
-				saveToFile(list, BoardDao.FNAME);
+				//saveToFile(list, BoardDao.FNAME);
 				return;
 			}
 		}
